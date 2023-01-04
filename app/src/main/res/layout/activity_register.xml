@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
 
     <TextView
         android:id="@+id/dummyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Learn Code"
+        android:text="Register"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="30sp"
@@ -22,13 +22,15 @@
         android:id="@+id/dummyimg"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/education"
+        android:src="@drawable/register"
         android:layout_below="@+id/dummyText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 
+
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edEmail"
+        android:id="@+id/edEmailRe"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,15 +51,12 @@
 
 
 
-
-
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edpassword"
+        android:id="@+id/edpasswordRe"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edEmail"
+        android:layout_below="@id/edEmailRe"
         android:layout_marginTop="16dp"
         android:layout_margin="18dp"
         app:passwordToggleEnabled="true">
@@ -73,37 +72,38 @@
 
 
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ednumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edpasswordRe"
+        android:layout_marginTop="16dp"
+        android:layout_margin="18dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/numbers">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Phone Number"
+            android:inputType="number"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
-        android:id="@+id/Loginbtn"
+        android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Submit"
         android:textAllCaps="false"
-        android:layout_below="@id/edpassword"
+        android:layout_below="@id/ednumber"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         />
-
-
-    <Button
-        android:id="@+id/registerbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginLeft="10dp"
-        android:textAllCaps="false"
-        android:layout_below="@id/edpassword"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@id/Loginbtn"/>
-
-
-
-
-
-
-
 
 
 
