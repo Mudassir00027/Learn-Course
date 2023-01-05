@@ -1,55 +1,40 @@
 package com.example.learncourse;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import com.example.learncourse.Adopters.CourseListAdopter;
 import com.example.learncourse.Models.CoursListModel;
 
 import java.util.ArrayList;
 
-public class DashboardActivity extends AppCompatActivity {
+public class CourseListFullActivity extends AppCompatActivity {
 
-    RecyclerView rvCourseList;
+    RecyclerView rvCourseListFull;
     CourseListAdopter courseListAdopter;
     ArrayList<CoursListModel> list;
-
-    TextView viewMore;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_course_list_full);
 
-        rvCourseList = findViewById(R.id.RvCourseList);
-        viewMore = findViewById(R.id.ViewMoreBtn);
-
-
-        viewMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-                Intent intent = new Intent(DashboardActivity.this,CourseListFullActivity.class);
-                startActivity(intent);
-
-
-            }
-        });
+        rvCourseListFull = findViewById(R.id.RvCourseListFull);
 
         list = new ArrayList<>();
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL); // set Horizontal Orientation
-        rvCourseList.setLayoutManager(linearLayoutManager); //
-        rvCourseList.setHasFixedSize(true);
+       /* GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+        rvCourseListFull.setLayoutManager(gridLayoutManager);
+        rvCourseListFull.setHasFixedSize(true);*/
 
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
+        rvCourseListFull.setLayoutManager(linearLayoutManager); //
+        rvCourseListFull.setHasFixedSize(true);
 
 
 
@@ -65,7 +50,8 @@ public class DashboardActivity extends AppCompatActivity {
 
 
         courseListAdopter = new CourseListAdopter(this, list);
-        rvCourseList.setAdapter(courseListAdopter);
+        rvCourseListFull.setAdapter(courseListAdopter);
+
 
 
     }
