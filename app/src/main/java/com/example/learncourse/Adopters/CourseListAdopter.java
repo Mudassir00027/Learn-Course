@@ -1,6 +1,7 @@
 package com.example.learncourse.Adopters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.learncourse.CourseDetailActivity;
 import com.example.learncourse.Models.CoursListModel;
 import com.example.learncourse.R;
 
@@ -37,8 +39,22 @@ public class CourseListAdopter extends RecyclerView.Adapter<CourseListAdopter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        CoursListModel item = list.get(position);
+
        holder.textView.setText(list.get(position).getText());
        holder.imageView.setImageResource(list.get(position).getImage());
+
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+
+           }
+       });
+
+
+
+
+
 
 
 

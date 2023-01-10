@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnCourse"
         tools:targetApi="31">
-
+        <activity
+            android:name=".CourseDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".CourseListFullActivity"
             android:exported="false" />
-
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

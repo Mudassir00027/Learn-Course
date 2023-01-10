@@ -42,7 +42,6 @@ public class CourseListFullActivity extends AppCompatActivity {
         list.add(new CoursListModel("java", R.drawable.education));
         list.add(new CoursListModel("java", R.drawable.education));
         list.add(new CoursListModel("java", R.drawable.education));
-
         list.add(new CoursListModel("java", R.drawable.education));
         list.add(new CoursListModel("java", R.drawable.education));
         list.add(new CoursListModel("java", R.drawable.education));
